@@ -14,6 +14,18 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TableModule } from 'primeng/table';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+export const config = {
+  apiKey: "AIzaSyAQPGUAYsGk3SdTkE3IkRiheOVmWckoQVw",
+  authDomain: "sportregister-2d7d7.firebaseapp.com",
+  databaseURL: "https://sportregister-2d7d7.firebaseio.com",
+  projectId: "sportregister-2d7d7",
+  storageBucket: "sportregister-2d7d7.appspot.com",
+  messagingSenderId: "1026356509067"
+};
+
 @NgModule({
   declarations: [
     MyApp,
@@ -26,7 +38,8 @@ import { TableModule } from 'primeng/table';
     BrowserModule,
     BrowserAnimationsModule,
     IonicModule.forRoot(MyApp),
-    TableModule
+    AngularFireModule.initializeApp(config, 'demo104'),
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
