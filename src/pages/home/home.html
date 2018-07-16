@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Torneo</ion-label>
+    <ion-select [(ngModel)]="torneo">
+      <ion-option *ngFor="let torn of torneos" value="{{torn.name}}">{{torn.name}}</ion-option>
+    </ion-select>
+  </ion-item>
+</ion-content>
